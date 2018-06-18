@@ -14,7 +14,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test:/\.s?css$/,
+                test:/\.s?css$/, 
                 use: [
                     'style-loader',
                     'css-loader',
@@ -25,6 +25,7 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-        contentBase: path.join(__dirname,'/public')
+        contentBase: path.join(__dirname,'/public'),
+        historyApiFallback: true
     }
 }
